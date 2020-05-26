@@ -36,6 +36,11 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
+.master-container {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
 .header {
   background: white;
 }
@@ -44,6 +49,7 @@ body {
   margin: 0 auto;
   padding: 14px 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -51,21 +57,22 @@ body {
 
 .logo {
   display: inline-block;
+  padding: 30px 0;
   width: 123px;
   height: 32px;
   background: url(../images/logo.svg) center no-repeat;
 }
 
 .navigation {
-  width: 390px;
-  margin-right: auto;
-  margin-left: 71px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
 }
 .navigation__link {
   text-decoration: none;
+  padding: 30px 0;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -82,9 +89,25 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.master-container {
-  max-width: 1520px;
-  margin: 0 auto;
+@media screen and (min-width: 920px) {
+  .header__container {
+    flex-direction: row;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .navigation {
+    width: 390px;
+    margin-right: auto;
+    margin-left: 71px;
+    flex-direction: row;
+    margin: 0 auto 0 71px;
+  }
+  .navigation__link {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
