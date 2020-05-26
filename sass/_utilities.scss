@@ -6,7 +6,7 @@
 %grid-big {
     display: grid;
     grid-gap: 80px 20px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 750px));
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
 }
 %flex-center {
@@ -18,8 +18,8 @@
 // BUTTONS
 %btn {
     @extend %flex-center;
-    color: white;
-    background: $blue;
+    color: $blue;
+    background: white;
     border-radius: 6px;
     text-decoration: none;
     user-select: none;
@@ -27,8 +27,8 @@
     transition: all 0.3s;
     border: 1px solid $blue;
     &:hover {
-        background: white;
-        color: $blue;
+        background: $blue;
+        color: white;
     }
     &:active {
         box-shadow: 0,0,1px,1px black;

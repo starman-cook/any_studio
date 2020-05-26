@@ -5,11 +5,15 @@ body {
     margin: 0;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;;
 }
-
+// MASTER CONTAINER
 @import 'master_container';
+@import 'media_master_container';
 // HEADER
 @import 'header';
 @import 'media_header';
 // VIDEO BLOCK
 @import 'video';
 @import 'media_video';
+// PROMO WITH GRID
+@import 'promo';
+@import 'media_promo';

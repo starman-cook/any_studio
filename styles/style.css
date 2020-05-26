@@ -1,12 +1,19 @@
-.video__btn, .buttons__header {
+.grid {
+  display: grid;
+  grid-gap: 80px 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+}
+
+.grid__btn, .video__btn, .buttons__header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.video__btn, .buttons__header {
-  color: white;
-  background: #18A0FB;
+.grid__btn, .video__btn, .buttons__header {
+  color: #18A0FB;
+  background: white;
   border-radius: 6px;
   text-decoration: none;
   user-select: none;
@@ -14,11 +21,11 @@
   transition: all 0.3s;
   border: 1px solid #18A0FB;
 }
-.video__btn:hover, .buttons__header:hover {
-  background: white;
-  color: #18A0FB;
+.grid__btn:hover, .video__btn:hover, .buttons__header:hover {
+  background: #18A0FB;
+  color: white;
 }
-.video__btn:active, .buttons__header:active {
+.grid__btn:active, .video__btn:active, .buttons__header:active {
   box-shadow: 0, 0, 1px, 1px black;
 }
 
@@ -31,13 +38,37 @@
   letter-spacing: -0.015em;
 }
 
-.buttons__header {
+.grid__btn, .buttons__header {
   width: 130px;
   height: 40px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   letter-spacing: -0.015em;
+}
+
+.promo__title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: -0.015em;
+  color: black;
+}
+
+.grid__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  color: black;
+}
+
+.grid__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -48,8 +79,14 @@ body {
 .master-container {
   max-width: 1520px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .master-container {
+    padding: 0;
+  }
+}
 .header {
   background: white;
 }
@@ -180,6 +217,34 @@ body {
   }
   .video__text {
     color: white;
+  }
+}
+.promo__title {
+  max-width: 750px;
+}
+
+.grid {
+  margin-bottom: 120px;
+}
+.grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px;
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+  .grid__item {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid__item {
+    align-items: flex-start;
   }
 }
 
