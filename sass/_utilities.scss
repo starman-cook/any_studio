@@ -1,0 +1,82 @@
+@mixin circle($radius) {
+    width: $radius;
+    height: $radius;
+    border-radius: 50%;
+}
+%grid-big {
+    display: grid;
+    grid-gap: 80px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 750px));
+    grid-template-rows: auto;
+}
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// BUTTONS
+%btn {
+    @extend %flex-center;
+    color: white;
+    background: $blue;
+    border-radius: 6px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid $blue;
+    &:hover {
+        background: white;
+        color: $blue;
+    }
+    &:active {
+        box-shadow: 0,0,1px,1px black;
+    }
+}
+%btn-big {
+    width: 192px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -0.015em;
+}
+%btn-small {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+}
+
+// TEXT FORMATS
+%title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    color: black;
+}
+%title-small {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: black;
+}
+%text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    color: $black-transparent;
+}
+%text-big {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: $black-transparent;
+}
