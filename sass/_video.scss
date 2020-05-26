@@ -1,0 +1,29 @@
+.video {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1560px;
+    height: 200px;
+    margin-bottom: 280px;
+    &__youtube {
+        width: 100%;
+        height: 100%;
+    }
+    &__join {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__text {
+        margin-top: 0;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 80px;
+        letter-spacing: -0.015em;
+        color: black;
+        text-align: center;
+    }
+    &__btn {
+        @extend %btn;
+        @extend %btn-big;
+    }
+}
