@@ -1,0 +1,21 @@
+.join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__text {
+        @extend %text-big;
+        text-align: center;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        @extend %btn;
+        @extend %btn-big;
+        margin: 20px;
+    }
+}

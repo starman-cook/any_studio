@@ -5,13 +5,13 @@
   grid-template-rows: auto;
 }
 
-.grid__btn, .video__btn, .buttons__header {
+.join__btn, .grid__btn, .video__btn, .buttons__header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.grid__btn, .video__btn, .buttons__header {
+.join__btn, .grid__btn, .video__btn, .buttons__header {
   color: #18A0FB;
   background: white;
   border-radius: 6px;
@@ -21,15 +21,15 @@
   transition: all 0.3s;
   border: 1px solid #18A0FB;
 }
-.grid__btn:hover, .video__btn:hover, .buttons__header:hover {
+.join__btn:hover, .grid__btn:hover, .video__btn:hover, .buttons__header:hover {
   background: #18A0FB;
   color: white;
 }
-.grid__btn:active, .video__btn:active, .buttons__header:active {
+.join__btn:active, .grid__btn:active, .video__btn:active, .buttons__header:active {
   box-shadow: 0, 0, 1px, 1px black;
 }
 
-.video__btn {
+.join__btn, .video__btn {
   width: 192px;
   height: 52px;
   font-weight: 500;
@@ -71,7 +71,7 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.gallery__text {
+.join__text, .gallery__text {
   font-weight: 400;
   font-size: 36px;
   line-height: 50px;
@@ -323,10 +323,42 @@ body {
     grid-template-columns: repeat(2, 173px);
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 985px) {
   .grid--narrow {
     grid-template-columns: repeat(4, 173px);
     margin: 0 auto;
+  }
+}
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.join__text {
+  text-align: center;
+}
+.join__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.join__btn {
+  margin: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .join__buttons {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .join {
+    flex-direction: row;
+  }
+  .join__text {
+    text-align: left;
   }
 }
 
