@@ -1,0 +1,25 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+    &__title {
+        @extend %title;
+        text-align: center;
+    }
+    &__text {
+        @extend %text-big;
+        text-align: center;
+    }
+}
+.grid {
+    &--narrow {
+        grid-gap: 60px 84px;
+        max-width: 1200px;
+        // margin: 0 auto;
+        grid-template-columns: repeat(1, 173px);
+    }
+    &__item--new-height {
+        height: 76px;
+    }
+}
