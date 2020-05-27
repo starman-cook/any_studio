@@ -1,0 +1,48 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+    &__social-media {
+        width: 236px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link--facebook {
+        background: url(../images/ic-facebook.svg);
+    }
+    &__link--twitter {
+        background: url(../images/ic-twitter.svg);
+    }
+    &__link--youtube {
+        background: url(../images/ic-youtube.svg);
+    }
+    &__link--dribble {
+        background: url(../images/ic-dribble.svg);
+    }
+    &__link {
+        @include circle(44px);
+        overflow: hidden;
+        margin-bottom: 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__link:hover {
+        transform: scale(1.1);
+    }
+    &__copyrights {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: $black-transparent;
+    }
+}
+.line {
+    height: 1px;
+    max-width: 1520px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+}

@@ -169,10 +169,12 @@ body {
   max-width: 1560px;
   height: 200px;
   margin-bottom: 280px;
+  overflow: hidden;
 }
 .video__youtube {
   width: 100%;
   height: 100%;
+  border: none;
 }
 .video__join {
   display: flex;
@@ -279,6 +281,10 @@ body {
   left: 0;
   background-position: center center;
   background-size: cover;
+  transition: all 0.3s;
+}
+.grid__link:hover {
+  filter: grayscale(100);
 }
 
 @media screen and (min-width: 600px) {
@@ -348,6 +354,10 @@ body {
   margin: 20px;
 }
 
+.bg-gray--push-down {
+  margin-bottom: 192px;
+}
+
 @media screen and (min-width: 700px) {
   .join__buttons {
     flex-direction: row;
@@ -360,6 +370,57 @@ body {
   .join__text {
     text-align: left;
   }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.footer__social-media {
+  width: 236px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__link--facebook {
+  background: url(../images/ic-facebook.svg);
+}
+.footer__link--twitter {
+  background: url(../images/ic-twitter.svg);
+}
+.footer__link--youtube {
+  background: url(../images/ic-youtube.svg);
+}
+.footer__link--dribble {
+  background: url(../images/ic-dribble.svg);
+}
+.footer__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__link:hover {
+  transform: scale(1.1);
+}
+.footer__copyrights {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.line {
+  height: 1px;
+  max-width: 1520px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
